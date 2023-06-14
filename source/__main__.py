@@ -37,10 +37,7 @@ cogslist = [
     'extensions.utility.snipe',
     'extensions.utility.reload',
 
-    'extensions.music.artist',
-
-    'extensions.settings.qotd',
-    'extensions.settings.moderator',
+    'extensions.music.artist'
 ]
 
 # Define a subclass of the commands.AutoShardedBot class

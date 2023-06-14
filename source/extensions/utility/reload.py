@@ -53,11 +53,9 @@ class reload(commands.Cog):
             'extensions.utility.time',
             'extensions.utility.info',
             'extensions.utility.snipe',
+            'extensions.utility.reload',
 
-            'extensions.music.artist',
-
-            'extensions.settings.qotd',
-            'extensions.settings.moderator',
+            'extensions.music.artist'
             ]
 
             for ext in cogslist:

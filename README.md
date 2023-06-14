@@ -7,11 +7,6 @@ Hayate is the perfect addition to any community-based Discord server, offering a
 ## Documentation
 [Documentation](#Documentation)
 
-## Features
-- Question of the Day module
-- Music module
-- Info module
-
 ## Environment Variables
 To run this project, you will need to add the following environment variables to your .env file. In my example it's stored under Hayate/secret/.env (while "Hayate" being folder holding everything).
 
