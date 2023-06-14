@@ -73,7 +73,7 @@ class reload(commands.Cog):
         await interaction.response.send_message(embed = embed)
 
     @reload.error
-    async def say_error(self, interaction: discord.Interaction, error):
+    async def reload_error(self, interaction: discord.Interaction, error):
         embed = discord.Embed(
             title = 'Missing Permissions',
             description = 'You\'re not Hayate\'s owner nor a Hayate\'s tester!',

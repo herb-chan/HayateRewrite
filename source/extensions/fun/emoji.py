@@ -83,11 +83,11 @@ class emoji(commands.GroupCog, name = 'emoji'):
             await interaction.response.send_message(embed = embed)
 
     @app_commands.command(
-    name='steal',
-    description='Steal\'s provided emoji and adds it to the current guild.'
+        name = 'steal',
+        description = 'Steal\'s provided emoji and adds it to the current guild.'
     )
     @app_commands.describe(
-        emoji='Emoji that you want to steal.'
+        emoji = 'Emoji that you want to steal.'
     )
     @app_commands.guild_only()
     async def steal(self, interaction: discord.Interaction, emoji: str):
