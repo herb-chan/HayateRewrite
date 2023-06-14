@@ -33,9 +33,38 @@ class reload(commands.Cog):
         )
         
         try:
-            synced = await self.client.tree.sync()
+            cogslist = [
+            'extensions.economy.wallet',
+            'extensions.economy.daily',
+            'extensions.economy.give',
+            'extensions.economy.checklist',
+            
+            'extensions.fun.flags',
+            'extensions.fun.emoji',
+            'extensions.fun.dice',
+            'extensions.fun.ship',
 
-            embed.description = f'**Successfully Reloaded** `{str(len(synced))}` **Cogs!**'
+            'extensions.info.github',
+            'extensions.info.members', 
+            'extensions.info.guild',
+
+            'extensions.utility.ping',
+            'extensions.utility.remindme',
+            'extensions.utility.time',
+            'extensions.utility.info',
+            'extensions.utility.snipe',
+
+            'extensions.music.artist',
+
+            'extensions.settings.qotd',
+            'extensions.settings.moderator',
+            ]
+
+            for ext in cogslist:
+                await self.client.unload_extension(ext)
+                await self.client.load_extension(ext)
+
+            embed.description = f'**Successfully Reloaded** `{str(len(cogslist))}` **Cogs!**'
             embed.color = 0x575fcf
         except Exception as e:
             embed.description = f'**An error occured:** {e}'

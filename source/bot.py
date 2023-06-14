@@ -43,6 +43,7 @@ class Client(commands.Bot):
             'extensions.utility.time',
             'extensions.utility.info',
             'extensions.utility.snipe',
+            'extensions.utility.reload',
 
             'extensions.music.artist',
 
