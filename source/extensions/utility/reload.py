@@ -69,12 +69,11 @@ class reload(commands.Cog):
         except Exception as e:
             embed.description = f'**An error occured:** {e}'
             embed.color = 0xff5e57
-            print(e)
 
         await interaction.response.send_message(embed = embed)
 
     @reload.error
-    async def say_error(self, interaction: discord.Interaction):
+    async def say_error(self, interaction: discord.Interaction, error):
         embed = discord.Embed(
             title = 'Missing Permissions',
             description = 'You\'re not Hayate\'s owner nor a Hayate\'s tester!',
