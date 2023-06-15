@@ -34,31 +34,7 @@ class reload(commands.Cog):
         )
         
         try:
-            cogslist = [
-            'extensions.economy.wallet',
-            'extensions.economy.daily',
-            'extensions.economy.give',
-            'extensions.economy.checklist',
-            'extensions.economy.lottery',
-            
-            'extensions.fun.flags',
-            'extensions.fun.emoji',
-            'extensions.fun.dice',
-            'extensions.fun.ship',
-
-            'extensions.info.github',
-            'extensions.info.members', 
-            'extensions.info.guild',
-
-            'extensions.utility.ping',
-            'extensions.utility.remindme',
-            'extensions.utility.time',
-            'extensions.utility.info',
-            'extensions.utility.snipe',
-            'extensions.utility.reload',
-
-            'extensions.music.artist'
-            ]
+            cogslist = self.client.cogslist
 
             for ext in cogslist:
                 await self.client.unload_extension(ext)
