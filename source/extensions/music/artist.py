@@ -13,13 +13,14 @@ import discord
 from config.api.spotify_api import (get_songs_by_artist, get_token, search_for_artist)
 from discord import app_commands
 from discord.ext import commands
+from main import Hayate
 
 # locale formatting
 locale.setlocale(locale.LC_ALL, 'en_US') 
 
 class artists(commands.Cog):
-    def __init__(self, client: commands.Bot):
-        self.client = client
+    def __init__(self, client: Hayate):
+        self.client: Hayate = client
 
     @app_commands.command(
             name = 'artist', 

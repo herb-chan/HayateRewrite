@@ -15,6 +15,7 @@ from config.load_env import mongo
 from discord import app_commands
 from discord.ext import commands
 from discord.utils import format_dt
+from main import Hayate
 
 # locale formatting
 locale.setlocale(locale.LC_ALL, 'en_US')
@@ -25,8 +26,8 @@ money = db['Wallets']
 daily = db['Dailies']
 
 class Daily(commands.Cog):
-    def __init__(self, client: commands.Bot):
-        self.client = client
+    def __init__(self, client: Hayate):
+        self.client: Hayate = client
 
     @app_commands.command(
     name='daily',

@@ -10,10 +10,11 @@ import datetime
 import discord
 from discord import app_commands
 from discord.ext import commands
+from main import Hayate
 
-class Guild(commands.Cog):
-    def __init__(self, client: commands.Bot):
-        self.client = client
+class guild(commands.Cog):
+    def __init__(self, client: Hayate):
+        self.client: Hayate = client
 
     @app_commands.command(
             name = 'guild', 
@@ -78,4 +79,4 @@ class Guild(commands.Cog):
         await interaction.response.send_message(embed = guild_embed)
 
 async def setup(client: commands.Bot) -> None:
-    await client.add_cog(Guild(client))
+    await client.add_cog(guild(client))

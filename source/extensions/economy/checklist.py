@@ -15,6 +15,7 @@ from config.functions.checks.check_checklist import check_checklist
 from config.load_env import mongo
 from discord import app_commands
 from discord.ext import commands
+from main import Hayate
 
 # locale formatting
 locale.setlocale(locale.LC_ALL, 'en_US')

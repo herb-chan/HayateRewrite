@@ -11,10 +11,11 @@ import discord
 from config.functions.flags import show_stats, show_top, start_game
 from discord import app_commands
 from discord.ext import commands
+from main import Hayate
 
 class flags(commands.GroupCog, name='flags'):
-    def __init__(self, client: commands.Bot):
-        self.client = client
+    def __init__(self, client: Hayate):
+        self.client: Hayate = client
     
     @app_commands.command(
         name = 'guess',

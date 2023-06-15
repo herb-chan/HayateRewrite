@@ -13,6 +13,7 @@ import discord
 from config.load_env import mongo
 from discord import app_commands
 from discord.ext import commands
+from main import Hayate
 
 # locale formatting
 locale.setlocale(locale.LC_ALL, 'en_US') 
@@ -22,8 +23,8 @@ db = mongo['Users']
 money = db['Wallets']
 
 class give(commands.Cog):
-    def __init__(self, client: commands.Bot):
-        self.client = client
+    def __init__(self, client: Hayate):
+        self.client: Hayate = client
 
     @app_commands.command(
         name = 'give',

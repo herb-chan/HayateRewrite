@@ -6,16 +6,17 @@
 '''
 
 import datetime
-import psutil
 import platform
 
 import discord
+import psutil
 from discord import app_commands
 from discord.ext import commands
+from main import Hayate
 
 class info(commands.Cog):
-    def __init__(self, client: commands.Bot):
-        self.client = client
+    def __init__(self, client: Hayate):
+        self.client: Hayate = client
 
     @app_commands.command(
         name = 'info',

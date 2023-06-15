@@ -11,14 +11,15 @@ import discord
 from config.load_env import mongo
 from discord import app_commands
 from discord.ext import commands
+from main import Hayate
 
 # database collections
 db = mongo['Guilds']
 snipes = db['Snipes']
 
 class snipe(commands.Cog):
-    def __init__(self, client: commands.Bot):
-        self.client = client
+    def __init__(self, client: Hayate):
+        self.client: Hayate = client
     
     @commands.Cog.listener()
     async def on_message_delete(self, message):

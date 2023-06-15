@@ -6,15 +6,16 @@
 '''
 
 import datetime
-from config.functions.permissions.is_owner import is_owner
 
 import discord
+from config.functions.permissions.is_owner import is_owner
 from discord import app_commands
 from discord.ext import commands
+from main import Hayate
 
 class reload(commands.Cog):
-    def __init__(self, client: commands.Bot):
-        self.client = client
+    def __init__(self, client: Hayate):
+        self.client: Hayate = client
 
     @app_commands.command(
         name = 'reload',
@@ -38,6 +39,7 @@ class reload(commands.Cog):
             'extensions.economy.daily',
             'extensions.economy.give',
             'extensions.economy.checklist',
+            'extensions.economy.lottery',
             
             'extensions.fun.flags',
             'extensions.fun.emoji',

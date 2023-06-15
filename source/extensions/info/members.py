@@ -11,10 +11,11 @@ from typing import Optional
 import discord
 from discord import app_commands
 from discord.ext import commands
+from main import Hayate
 
-class Members(commands.Cog):
-    def __init__(self, client: commands.Bot):
-        self.client = client
+class members(commands.Cog):
+    def __init__(self, client: Hayate):
+        self.client: Hayate = client
 
     @app_commands.command(
             name = 'avatar', 
@@ -176,4 +177,4 @@ class Members(commands.Cog):
         await interaction.response.send_message(embed = info_embed)
 
 async def setup(client: commands.Bot) -> None:
-    await client.add_cog(Members(client))
+    await client.add_cog(members(client))
